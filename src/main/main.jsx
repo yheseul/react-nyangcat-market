@@ -4,8 +4,7 @@ import { MENULIST, MEMBERSONLY }  from "./Data";
 import { RiArrowDownSFill } from "react-icons/ri";
 import Header from "./header";
 import Menu from "./menu";
-import ArticleSlider from "./articleSlider";
-
+import Article from "./article";
 
 export default function Main() {
   return(
@@ -33,8 +32,4 @@ function MembersOnly({ membersOnly }) {
       </div>
     </div>
   )
-}
-
-function Article() {
-  return  <ArticleSlider />
 }

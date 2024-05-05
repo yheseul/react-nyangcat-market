@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ARTICLE } from "./Data";
 
-export default function ArticleSlider() {
+export default function Article() {
   const settings = {
     dots: true,
     infinite: true,

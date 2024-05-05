@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FiMenu } from "react-icons/fi";
 import { CATEGORY_DROP_DOWN_MENU } from "./Data";
+import { FiMenu } from "react-icons/fi";
 
 export default function Menu({ menuLists }) {
   const lis = [];
@@ -32,13 +32,8 @@ export default function Menu({ menuLists }) {
 function CategoryMenu({ category }) {
   const [isDropDownMenuVisible, setDropDownMenuVisible] = useState(false);
 
-  const handleMouseOver = () => {
-    setDropDownMenuVisible(true);
-  }
-
-  const handleMouseOut = () => {
-    setDropDownMenuVisible(false);
-  }
+  const handleMouseOver = () => setDropDownMenuVisible(true);
+  const handleMouseOut = () => setDropDownMenuVisible(false);
 
   return(
     <li
@@ -49,8 +44,8 @@ function CategoryMenu({ category }) {
       <FiMenu className="mr-1 mt-1"/>
       <span>{category}</span>
       {isDropDownMenuVisible && (
-        <div className="absolute top-full w-60 left-0 dropDownMenu bg-white shadow-md z-[100] pb-3 px-4">
-          <CategoryDropDownMenu 
+        <div className="absolute top-full w-60 left-0 bg-white shadow-md z-[100] border">
+          <CategoryDropDownMenu
             categoryDropDownMenu={CATEGORY_DROP_DOWN_MENU}/>
         </div>
         )}
@@ -63,8 +58,8 @@ function CategoryDropDownMenu({ categoryDropDownMenu }) {
 
   categoryDropDownMenu.forEach((list) =>{
     lis.push(
-      <li className="flex font-normal text-slate-950 pt-3">
-      <span className=" pr-1 text-2xl">{list.img}</span>
+      <li className="hover:bg-slate-100 hover:text-blue-500 flex font-normal text-slate-950 py-1.5 px-4">
+      <span className="pr-1 text-2xl">{list.img}</span>
       <span>{list.name}</span>
       </li>
     )

@@ -1,10 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import { HEADER }  from "./Data";
 import logo from "./logo.png";
 import { IoSearch } from "react-icons/io5";
 import { SlLocationPin } from "react-icons/sl";
 import { VscHeart } from "react-icons/vsc";
 import { BsCart2 } from "react-icons/bs";
+import { CiSearch } from "react-icons/ci";
 
 export default function Header() {
   return(
@@ -54,9 +55,57 @@ function Search() {
 function HeaderSubMenu() {
   return(
     <div className="flex text-3xl mt-3 text-slate-600 w-1/4 lg:ml-20">
-      <SlLocationPin className="hover:text-blue-500 ml-5"/>
+      <Tooltip>
+        <SlLocationPin className="hover:text-blue-500 ml-5"/>
+      </Tooltip>
       <VscHeart className="hover:text-blue-500 ml-5"/>
       <BsCart2 className="hover:text-blue-500 ml-5"/>
+    </div>
+  )
+}
+
+function Tooltip({ children }) {
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+
+  const showTooltip = () => setTooltipVisible(true);
+  const hideTooltip = () => setTooltipVisible(false);
+
+  return(
+    <div className="relative inline-block">
+      <span
+        onMouseOver={showTooltip}
+        onMouseOut={hideTooltip}
+      >
+        {children}
+      </span>
+      {tooltipVisible && (
+        <div
+          className="tooltip z-[100] absolute bg-white p2 rounded shadow-md text-base px-4 py-4 border"
+          onMouseOver={showTooltip}
+          onMouseOut={hideTooltip}
+        >
+          <div className="text-left">
+            <p><span className="text-blue-500">배송지를 등록</span>하고</p>
+            <p>구매 가능한 상품을 확인하세요!</p>
+          </div>
+          <div className="flex pt-3">
+            <button
+              type="button"
+              onClick={hideTooltip}
+              className="align-middle bg-white shadow-md w-1/3 py-1 rounded border"
+            >
+              로그인
+            </button>
+            <button
+              type="button"
+              onClick={hideTooltip}
+              className="flex align-middle bg-blue-400 shadow-md ml-4 w-2/3 pl-5 py-1 rounded border text-white"
+            >
+              <CiSearch className="mr-2 mt-1"/> 주소 검색
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -10,8 +10,9 @@ body{
   min-width: 725px;
   align-items: center;
 }
-
-.dropDownMenu{
-  margin-top: 1.1403125rem;
+.tooltip{
+  width: 250px;
+  align-items: center;
+  margin: 0 100px 0 0;
+  text-align: center;
 }
-
