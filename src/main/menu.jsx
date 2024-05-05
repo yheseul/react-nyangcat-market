@@ -45,28 +45,53 @@ function CategoryMenu({ category }) {
       <span>{category}</span>
       {isDropDownMenuVisible && (
         <div className="absolute top-full w-60 left-0 bg-white shadow-md z-[100] border">
-          <CategoryDropDownMenu
-            categoryDropDownMenu={CATEGORY_DROP_DOWN_MENU}/>
+          <MultiDropDownMenu 
+          menuItems={CATEGORY_DROP_DOWN_MENU}
+          />
         </div>
-        )}
+      )}
     </li>
   )
 }
 
-function CategoryDropDownMenu({ categoryDropDownMenu }) {
-  const lis = [];
+function MultiDropDownMenu({ menuItems }){
+  const [currnetItem, setCurrentItem] = useState(null);
 
-  categoryDropDownMenu.forEach((list) =>{
-    lis.push(
-      <li className="hover:bg-slate-100 hover:text-blue-500 flex font-normal text-slate-950 py-1.5 px-4">
-      <span className="pr-1 text-2xl">{list.img}</span>
-      <span>{list.name}</span>
-      </li>
-    )
-  })
+  const handleMouseOver = (item) =>{
+    setCurrentItem(item);
+  }
+
+  const handleMouseOut = () => {
+    setCurrentItem(null);
+  }
 
   return(
-    <ul>{lis}</ul>
+    <div>
+      <ul>
+        {menuItems.map((item) => (
+          <li
+            className="hover:bg-slate-100 hover:text-blue-500 flex font-normal text-slate-950 py-1.5 px-4"
+            key={item.name}
+            onMouseOver={() => handleMouseOver(item)}
+            onMouseOut={handleMouseOut}
+          >
+            <span className="pr-1 text-2xl">{item.img}</span>
+            <sppan>{item.name}</sppan>
+          </li>
+        ))}
+      </ul>
+      {currnetItem && (
+        <div>
+          <ul>
+            {currnetItem.submenu.map((subItem) => (
+              <li className="hover:bg-slate-100 hover:text-blue-500 flex font-normal text-slate-950 py-1.5 px-4">
+                {subItem.name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   )
 }
 
