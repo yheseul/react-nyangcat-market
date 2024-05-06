@@ -9,6 +9,13 @@ const MEMBERSONLY = {
   customerService: "고객센터"
 }
 
+const CUSTOMERSERVICE = [
+  "공지사항",
+  "자주하는 질문",
+  "1:1 문의",
+  "대량주문 문의"
+]
+
 const HEADER = {
   menu1: "마켓냥냥",
   menu2: "뷰티냥냥"
@@ -197,4 +204,4 @@ const ARTICLE = [{
 }
 ]
 
-export { MENULIST, HEADER, ARTICLE, MEMBERSONLY, CATEGORY_DROP_DOWN_MENU };
+export { MEMBERSONLY, CUSTOMERSERVICE, HEADER, MENULIST,  CATEGORY_DROP_DOWN_MENU, ARTICLE };

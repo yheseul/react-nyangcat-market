@@ -81,11 +81,11 @@ function MultiDropDownMenu({ menuItems }){
         ))}
       </ul>
       {currnetItem && (
-        <div>
+        <div className="absolute top-0 left-60 w-60 bg-slate-100 text-slate-950">
           <ul>
             {currnetItem.submenu.map((subItem) => (
-              <li className="hover:bg-slate-100 hover:text-blue-500 flex font-normal text-slate-950 py-1.5 px-4">
-                {subItem.name}
+              <li className="flex font-normal  py-1.5 px-4">
+                <span>{subItem.name}</span>
               </li>
             ))}
           </ul>

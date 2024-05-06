@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { HEADER }  from "./Data";
+import { HEADER, MEMBERSONLY }  from "./Data";
+import { RiArrowDownSFill } from "react-icons/ri";
 import logo from "./logo.png";
 import { IoSearch } from "react-icons/io5";
 import { SlLocationPin } from "react-icons/sl";
@@ -9,13 +10,33 @@ import { CiSearch } from "react-icons/ci";
 
 export default function Header() {
   return(
-    <div className="flex justify-center items-center w-full my-2 ml-2 lg:ml-20">
-      <HeaderLogo />
-      <HeaderMenu 
-        headerMenu1={HEADER.menu1}
-        headerMenu2={HEADER.menu2}/>
-      <Search />
-      <HeaderSubMenu />
+    <div className="header">
+      <MembersOnly 
+        membersOnly={MEMBERSONLY}/>
+      <div className="headerMain">
+        <HeaderLogo />
+        <HeaderMenu 
+          headerMenu1={HEADER.menu1}
+          headerMenu2={HEADER.menu2}/>
+        <Search />
+        <HeaderSubMenu />
+      </div>
+    </div>
+  )
+}
+
+function MembersOnly({ membersOnly }) {
+  return(
+    <div className="membersOnly">
+      <a href=" " className="joinMembership">{membersOnly.joinMembership}</a>
+      <div className="divider">|</div>
+      <a href=" " className="logIn">{membersOnly.logIn}</a>
+      <div className="divider">|</div>
+      <div className="customerService">
+        <a href=" " className="customerServiceText">{membersOnly.customerService}
+        <RiArrowDownSFill size="16" className="customerServiceImage"/>
+      </a>
+      </div>
     </div>
   )
 }

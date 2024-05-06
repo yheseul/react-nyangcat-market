@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 body{
   background-color: #FFFFFF;
   width: 100%;
@@ -9,7 +9,67 @@ body{
   margin: 0 auto;
   min-width: 725px;
   align-items: center;
+} */
+body{
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  heigth: 100%;
 }
+.header{
+  position: relative;
+  width: 1050px;
+  heigth: 100px;
+  margin: 0px auto;
+  letter-apacing: -0.3px;
+}
+.membersOnly{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 320; /*고객센터 드롭다운*/
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 12px;
+}
+.joinMembership{
+  display: block;
+  color: rgb(59 130 246);
+  cursor: pointer;
+}
+.divider{
+  width: 1px;
+  heigth: 13px;
+  margin: 0px 12px;
+  color: rgb(217, 217, 217);
+}
+.logIn{
+  display: block;
+  cursor: pointer;
+}
+.customerService{
+  line-header: 35px;
+  position: relative;
+  padding-top: 3px;
+}
+.customerServiceText{
+  display: block;
+  cursor: pointer;
+}
+.customerServiceImage{
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.headerMain{
+  heigth: 100px;
+  padding-top: 36px;
+  display: flex;
+  -webkit-box-align: center;
+}
+
+
+
 .tooltip{
   width: 250px;
   align-items: center;
