@@ -288,13 +288,11 @@ body{
 .categoryMultiDropDownMenuList{
   display: flex;
   font-weight: 400;
-  padding: 6px 16px 16px 6px;
+  padding: 7.5px 16px 7.5px 16px;
 }
 .navigationMenu{
   display: flex;
   margin-left: 30px;
-  /* font-size: 16px;
-  line-height: 24px; */
 }
 .navigationMenuListWrap{
   display: flex;
@@ -320,6 +318,7 @@ body{
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  cursor: pointer;
 }
 .oneDayDeliveryInformation{
   height: 32px;
@@ -352,7 +351,7 @@ body{
   align-items: center;
 }
 .articleSliderImage{
-  max-width: 1900px;
+
 }
 .productArticle{
   width: 1050px;
