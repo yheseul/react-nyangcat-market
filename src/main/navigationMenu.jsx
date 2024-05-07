@@ -116,7 +116,7 @@ function OneDayDeliveryInformation() {
   return(
     <div className="oneDayDeliveryInformationWrap">
       <div className="oneDayDeliveryInformation">
-        <span className="oneDay">햇살·하루</span>
+        <span className="oneDay">햇살 · 하루</span>
         배송안내
       </div>
     </div>

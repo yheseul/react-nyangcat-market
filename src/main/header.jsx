@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HEADER, MEMBERSONLY }  from "./Data";
+import { HEADER, MEMBERSONLY, CUSTOMERSERVICE }  from "./Data";
 import { RiArrowDownSFill } from "react-icons/ri";
 import logo from "./logo.png";
 import { IoSearch } from "react-icons/io5";
@@ -14,7 +14,6 @@ export default function Header() {
       <MembersOnly 
         membersOnly={MEMBERSONLY}/>
       <div className="headerMain">
-        <HeaderLogo />
         <HeaderMenu 
           headerMenu1={HEADER.menu1}
           headerMenu2={HEADER.menu2}/>
@@ -32,27 +31,60 @@ function MembersOnly({ membersOnly }) {
       <div className="divider">|</div>
       <a href=" " className="logIn">{membersOnly.logIn}</a>
       <div className="divider">|</div>
-      <div className="customerService">
-        <a href=" " className="customerServiceText">{membersOnly.customerService}
-        <RiArrowDownSFill size="16" className="customerServiceImage"/>
-      </a>
-      </div>
+      <CustomerService
+        membersOnly={membersOnly}
+      />
     </div>
   )
 }
 
-function HeaderLogo() {
+function CustomerService({ membersOnly }) {
+  const[isDropDownMenuVisible, setDropDownMenuVisible] = useState(false);
+
+  const handleMouseOver = () => setDropDownMenuVisible(true);
+  const handleMouseOut = () => setDropDownMenuVisible(false);
+
   return(
-    <img 
-      src={logo}
-      alt="logo" 
-      className="logo"/>
+    <div
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+      className="customerService"
+    >
+      <a href=" " className="customerServiceText">{membersOnly.customerService}
+        <RiArrowDownSFill size="16" className="customerServiceImage"/>
+      </a>
+    
+    {isDropDownMenuVisible && (
+      <DropDownMenu
+        dropDownMenulists={CUSTOMERSERVICE}
+      />
+    )}
+    </div>
+  )
+}
+
+function DropDownMenu({ dropDownMenulists }) {
+  const lis = [];
+
+  dropDownMenulists.forEach((list) => {
+    lis.push(
+      <li className="dropDownMenuList">{list}</li>
+    )
+  })
+
+  return(
+    <ul className="dropDownMenu">{lis}</ul>
   )
 }
 
 function HeaderMenu({ headerMenu1, headerMenu2 }) {
   return(
-    <div>
+    <div className="headerMenuWrap">
+      <img
+        src={logo}
+        alt="logo" 
+        className="logo"
+      />
       <button className="headerMenu headerMenu1">{headerMenu1}</button>
       <span className="headerMenuDivider">|</span>
       <button className="headerMenu headerMenu2">{headerMenu2}</button>
@@ -77,12 +109,14 @@ function Search() {
 
 function HeaderSubMenu() {
   return(
-    <div className="headerSubMenu">
-      <Tooltip>
-        <SlLocationPin className="registerDeliveryDestination headerSubMenuHover"/>
-      </Tooltip>
-      <VscHeart className="wish headerSubMenuHover"/>
-      <BsCart2 className="shoppingCart headerSubMenuHover"/>
+    <div className="headerSubMenuWrap">
+      <div className="headerSubMenu">
+        <Tooltip>
+          <SlLocationPin className="registerDeliveryDestination headerSubMenuHover"/>
+        </Tooltip>
+        <VscHeart className="wish headerSubMenuHover"/>
+        <BsCart2 className="shoppingCart headerSubMenuHover"/>
+      </div>
     </div>
   )
 }
