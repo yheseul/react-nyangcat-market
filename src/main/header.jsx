@@ -46,41 +46,43 @@ function HeaderLogo() {
     <img 
       src={logo}
       alt="logo" 
-      className="ml-2"/>
+      className="logo"/>
   )
 }
 
 function HeaderMenu({ headerMenu1, headerMenu2 }) {
   return(
-    <div className="text-slate-400 text-lg w-1/4 lg:w-1/6">
-      <span className="font-semibold hover:text-blue-500">{headerMenu1}</span>
-      <span className="font-light mx-2">|</span>
-      <span className="font-semibold hover:text-blue-500">{headerMenu2}</span>
+    <div>
+      <button className="headerMenu headerMenu1">{headerMenu1}</button>
+      <span className="headerMenuDivider">|</span>
+      <button className="headerMenu headerMenu2">{headerMenu2}</button>
     </div>
   )
 }
 
 function Search() {
   return(
-    <div className="h-12 ml-4 mt-3 w-6/8 lg:w-1/4 rounded-md outline outline-blue-500 inline-flex bg-white">
-      <input 
-        type="text"
-        placeholder="검색어를 입력해주세요."
-        className="w-5/6 ml-2 focus:outline-none"
-      />
-      <IoSearch className="w-1/6 h-6 my-3 text-blue-500"/>
+    <div className="searchBox">
+      <div className="search">
+        <input 
+          type="text"
+          placeholder="검색어를 입력해주세요."
+          className="searchInput"
+        />
+        <IoSearch className="submitButton"/>
+      </div>
     </div>
   )
 }
 
 function HeaderSubMenu() {
   return(
-    <div className="flex text-3xl mt-3 text-slate-600 w-1/4 lg:ml-20">
+    <div className="headerSubMenu">
       <Tooltip>
-        <SlLocationPin className="hover:text-blue-500 ml-5"/>
+        <SlLocationPin className="registerDeliveryDestination headerSubMenuHover"/>
       </Tooltip>
-      <VscHeart className="hover:text-blue-500 ml-5"/>
-      <BsCart2 className="hover:text-blue-500 ml-5"/>
+      <VscHeart className="wish headerSubMenuHover"/>
+      <BsCart2 className="shoppingCart headerSubMenuHover"/>
     </div>
   )
 }
@@ -92,7 +94,7 @@ function Tooltip({ children }) {
   const hideTooltip = () => setTooltipVisible(false);
 
   return(
-    <div className="relative inline-block">
+    <div>
       <span
         onMouseOver={showTooltip}
         onMouseOut={hideTooltip}
@@ -101,28 +103,28 @@ function Tooltip({ children }) {
       </span>
       {tooltipVisible && (
         <div
-          className="tooltip z-[100] absolute bg-white p2 rounded shadow-md text-base px-4 py-4 border"
+          className="tooltip"
           onMouseOver={showTooltip}
           onMouseOut={hideTooltip}
         >
-          <div className="text-left">
-            <p><span className="text-blue-500">배송지를 등록</span>하고</p>
+          <div className="tooltipText">
+            <p><span className="tooltipBlueText">배송지를 등록</span>하고</p>
             <p>구매 가능한 상품을 확인하세요!</p>
           </div>
-          <div className="flex pt-3">
+          <div className="tooltipButton">
             <button
               type="button"
               onClick={hideTooltip}
-              className="align-middle bg-white shadow-md w-1/3 py-1 rounded border"
+              className="tooltipLoginButton"
             >
               로그인
             </button>
             <button
               type="button"
               onClick={hideTooltip}
-              className="flex align-middle bg-blue-400 shadow-md ml-4 w-2/3 pl-5 py-1 rounded border text-white"
+              className="tooltipAddressSearchButton"
             >
-              <CiSearch className="mr-2 mt-1"/> 주소 검색
+              <CiSearch className="tooltipAddressSearchButtonImage"/> 주소 검색
             </button>
           </div>
         </div>

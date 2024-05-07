@@ -22,7 +22,6 @@ const HEADER = {
 }
 
 const MENULIST = [
-  {name: "카테고리"},
   {name: "신상품"},
   {name: "베스트"},
   {name: "알뜰쇼핑"},

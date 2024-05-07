@@ -21,11 +21,11 @@ export default function Article() {
   return(
     <Slider {...settings}>
       {ARTICLE.map((article) => (
-        <div key={article.name} className="flex justify-center items-center">
+        <div key={article.name} className="articleSlider">
           <img
             src={article.url}
             alt={article.alt}
-            className="max-w-full mx-auto"
+            className="articleSliderImage"
           />
         </div>
       ))}
