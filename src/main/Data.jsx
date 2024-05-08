@@ -1,6 +1,10 @@
 import article1 from "./article1.png";
 import article2 from "./article2.png";
 import article3 from "./article3.png";
+import eventSectionImage1 from "./eventSectionImage1.png";
+import eventSectionImage2 from "./eventSectionImage2.png";
+import eventSectionImage3 from "./eventSectionImage3.png";
+import eventSectionImage4 from "./eventSectionImage4.png";
 import { PiCatThin, PiFishSimpleThin, PiCakeThin, PiSprayBottleThin, PiToiletThin, PiPillThin, PiBathtubThin, PiGameControllerThin, PiBowlSteamThin, PiCastleTurretThin, PiHouseLineThin, PiBagThin } from "react-icons/pi";
 
 const MEMBERSONLY = {
@@ -203,4 +207,54 @@ const ARTICLE = [{
 }
 ]
 
-export { MEMBERSONLY, CUSTOMERSERVICE, HEADER, MENULIST,  CATEGORY_DROP_DOWN_MENU, ARTICLE };
+const EVENTSECTION = {
+  eventSectionTitle: "😻세계 고양이의 날 임박! 간식 랭킹😻",
+  eventSectionText: "놓치지 말고 지금 주문하세요!"
+}
+
+const EVENTSECTIONTMAGE = [{
+  name: "eventSectionImage1",
+  url: eventSectionImage1,
+  alt: "소프트릿 고양이 초미니 동결건조 트릿",
+  productName: "소프트릿 고양이 초미니 동결건조 트릿",
+  regularPrice: "16,000원",
+  discountRate: "7%",
+  discountPrice: "14,900원"
+
+}, {
+  name: "eventSectionImage2",
+  url: eventSectionImage2,
+  alt: "찹앤찹 찹찹트릿 열빙어 30g",
+  productName: "찹앤찹 찹찹트릿 열빙어 30g",
+  regularPrice: "5,500원",
+  discountRate: "10%",
+  discountPrice: "4,400원"
+}, {
+  name: "eventSectionImage3",
+  url: eventSectionImage3,
+  alt: "냥쌤 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
+  productName: "냥쌤 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
+  regularPrice: "17,000원",
+  discountRate: "36%",
+  discountPrice: "10,900원"
+}, {
+  name: "eventSectionImage4",
+  url: eventSectionImage4,
+  alt: "냥쌤 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
+  productName: "냥쌤 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
+  regularPrice: "23,700원",
+  discountRate: "51%",
+  discountPrice: "11,700원"
+}
+]
+
+export {
+  MEMBERSONLY,
+  CUSTOMERSERVICE,
+  HEADER,
+  MENULIST,
+  CATEGORY_DROP_DOWN_MENU,
+  ARTICLE,
+  EVENTSECTION,
+  EVENTSECTIONTMAGE
+};

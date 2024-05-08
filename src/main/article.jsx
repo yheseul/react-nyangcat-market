@@ -8,7 +8,7 @@ export default function Article() {
   const settings = {
     dots: true,
     infinite: true,
-    centerMode: true,
+    centerMode: false,
     speed: 500,
     slidesToShow: 1,
     autoplay: true,
