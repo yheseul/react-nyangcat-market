@@ -46,23 +46,46 @@ function RecommendedProductSlider({ contents }) {
   };
 
   return(
-    <Slider {...settings}>
+    <Slider
+      {...settings}
+      className="recommendedProductSlider"
+    >
       {contents.map((content) => (
-        <div key={content.name}>
-          <img
-            src={content.url}
-            alt={content.alt}
-          />
-          <button>
-            <BsCart2 />
-            <span>담기</span>
-          </button>
-          <div>{content.productName}</div>
-          <div>{content.regularPrice}</div>
-          <div>
-            <span>{content.discountRate}</span>
-            <span>{content.discountPrice}</span>
-          </div>
+        <div
+          key={content.name}
+          className="recommendedProduct"
+        >
+          <a
+            href=" "
+            className="recommendedProductLink"
+          >
+            <img
+              src={content.url}
+              alt={content.alt}
+            />
+            <div className="addWrap">
+              <button className="addButton">
+                <BsCart2 
+                  className="addButtonImage"
+                />
+                담기
+              </button>
+            </div>
+            <div className="recommendedProductContent">
+              <h3 className="recommendedProductName">{content.productName}</h3>
+              <div className="priceBoxWrap">
+                <div className="priceBox">
+                  <div className="regularPrice">{content.regularPrice}</div>
+                  <div>
+                  <div className="discount">
+                    <span className="discountRate">{content.discountRate}</span>
+                    <span className="discountPrice">{content.discountPrice}</span>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       ))}
     </Slider>
