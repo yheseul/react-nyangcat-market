@@ -1,10 +1,14 @@
 import article1 from "./article1.png";
 import article2 from "./article2.png";
 import article3 from "./article3.png";
-import eventSectionImage1 from "./eventSectionImage1.png";
-import eventSectionImage2 from "./eventSectionImage2.png";
-import eventSectionImage3 from "./eventSectionImage3.png";
-import eventSectionImage4 from "./eventSectionImage4.png";
+import recommendedProductImage1_1 from "./recommendedProductImage1_1.png";
+import recommendedProductImage1_2 from "./recommendedProductImage1_2.png";
+import recommendedProductImage1_3 from "./recommendedProductImage1_3.png";
+import recommendedProductImage1_4 from "./recommendedProductImage1_4.png";
+import recommendedProductImage2_1 from "./recommendedProductImage2_1.png";
+import recommendedProductImage2_2 from "./recommendedProductImage2_2.png";
+import recommendedProductImage2_3 from "./recommendedProductImage2_3.png";
+import recommendedProductImage2_4 from "./recommendedProductImage2_4.png";
 import { PiCatThin, PiFishSimpleThin, PiCakeThin, PiSprayBottleThin, PiToiletThin, PiPillThin, PiBathtubThin, PiGameControllerThin, PiBowlSteamThin, PiCastleTurretThin, PiHouseLineThin, PiBagThin } from "react-icons/pi";
 
 const MEMBERSONLY = {
@@ -34,7 +38,7 @@ const MENULIST = [
 
 const CATEGORY_DROP_DOWN_MENU = [{
   name: "세계 고양이의 날",
-  img: <PiCatThin className="text-rose-400"/>,
+  img: <PiCatThin className="text_rose_400"/>,
   submenu: [
     {name: "실시간 BEST"},
     {name: "뷰티"},
@@ -207,44 +211,83 @@ const ARTICLE = [{
 }
 ]
 
-const EVENTSECTION = {
-  eventSectionTitle: "😻세계 고양이의 날 임박! 간식 랭킹😻",
-  eventSectionText: "놓치지 말고 지금 주문하세요!"
+const RECOMMENDED_PRODUCT_TITLE = {
+  title: "😻세계 고양이의 날 임박! 간식 랭킹😻",
+  subTitle: "놓치지 말고 지금 주문하세요!"
 }
 
-const EVENTSECTIONTMAGE = [{
-  name: "eventSectionImage1",
-  url: eventSectionImage1,
+const RECOMMENDED_PRODUCT_CONTENTS = [{
+  name: "recommendedProductImage1_1",
+  url: recommendedProductImage1_1,
   alt: "소프트릿 고양이 초미니 동결건조 트릿",
-  productName: "소프트릿 고양이 초미니 동결건조 트릿",
+  productName: "[소프트릿] 고양이 초미니 동결건조 트릿",
   regularPrice: "16,000원",
   discountRate: "7%",
   discountPrice: "14,900원"
-
 }, {
-  name: "eventSectionImage2",
-  url: eventSectionImage2,
+  name: "recommendedProductImage1_2",
+  url: recommendedProductImage1_2,
   alt: "찹앤찹 찹찹트릿 열빙어 30g",
-  productName: "찹앤찹 찹찹트릿 열빙어 30g",
+  productName: "[찹앤찹] 찹찹트릿 열빙어 30g",
   regularPrice: "5,500원",
   discountRate: "10%",
   discountPrice: "4,400원"
 }, {
-  name: "eventSectionImage3",
-  url: eventSectionImage3,
+  name: "recommendedProductImage1_3",
+  url: recommendedProductImage1_3,
   alt: "냥쌤 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
-  productName: "냥쌤 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
+  productName: "[냥쌤] 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
   regularPrice: "17,000원",
   discountRate: "36%",
   discountPrice: "10,900원"
 }, {
-  name: "eventSectionImage4",
-  url: eventSectionImage4,
+  name: "recommendedProductImage1_4",
+  url: recommendedProductImage1_4,
   alt: "냥쌤 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
-  productName: "냥쌤 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
+  productName: "[냥쌤] 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
   regularPrice: "23,700원",
   discountRate: "51%",
   discountPrice: "11,700원"
+}
+]
+
+const RECOMMENDED_PRODUCT_TITLE2 = {
+  title: "모든 고양이가 좋아하는 추천 모래💖",
+  subTitle: "특가로 만나는 벤토나이트"
+}
+
+const RECOMMENDED_PRODUCT_CONTENTS2 =[{
+  name: "recommendedProductImage2_1",
+  url: recommendedProductImage2_1,
+  alt: "가또블랑코 벤토나이트 고양이모래 더스트제로 (6kg/2개입)",
+  productName: "[가또블랑코] 벤토나이트 고양이모래 더스트제로 6kg 2개",
+  regularPrice: "46,800원",
+  discountRate: "50%",
+  discountPrice: "46,800원"
+}, {
+  name: "recommendedProductImage2_2",
+  url: recommendedProductImage2_2,
+  alt: "페스룸 더스트 프리 벤토나이트 오리지널 (6kg/1개입)",
+  productName: "[페스룸] 더스트 프리 벤토나이트 오리지널 (6kg/1개입)",
+  regularPrice: "29,900원",
+  discountRate: "30%",
+  discountPrice: "20,900원"
+}, {
+  name: "recommendedProductImage2_3",
+  url: recommendedProductImage2_3,
+  alt: "앤샌드 벤토나이트 고양이모래 (6kg/2개입)",
+  productName: "[앤샌드] 벤토나이트 고양이모래 (6kg/2개입)",
+  regularPrice: "46,800원",
+  discountRate: "40%",
+  discountPrice: "28,080원"
+}, {
+  name: "recommendedProductImage2_4",
+  url: recommendedProductImage2_4,
+  alt: "아메리칸솔루션 라이트 벤토나이트 고양이모래 (6kg/3개입)",
+  productName: "[아메리칸솔루션] 라이트 벤토나이트 고양이모래 (6kg/3개입)",
+  regularPrice: "53,800원",
+  discountRate: "20%",
+  discountPrice: "43,040원"
 }
 ]
 
@@ -255,6 +298,8 @@ export {
   MENULIST,
   CATEGORY_DROP_DOWN_MENU,
   ARTICLE,
-  EVENTSECTION,
-  EVENTSECTIONTMAGE
+  RECOMMENDED_PRODUCT_TITLE,
+  RECOMMENDED_PRODUCT_CONTENTS,
+  RECOMMENDED_PRODUCT_TITLE2,
+  RECOMMENDED_PRODUCT_CONTENTS2
 };
