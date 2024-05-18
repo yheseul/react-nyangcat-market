@@ -47,13 +47,8 @@ function CategoryMenu() {
 function MultiDropDownMenu({ menuItems }){
   const [currnetItem, setCurrentItem] = useState(null);
 
-  const handleMouseOver = (item) =>{
-    setCurrentItem(item);
-  }
-
-  const handleMouseOut = () => {
-    setCurrentItem(null);
-  }
+  const handleMouseOver = (item) =>setCurrentItem(item);
+  const handleMouseOut = () => setCurrentItem(null);
 
   return(
     <div>
@@ -107,7 +102,7 @@ function NavigationMenu({ menuLists }) {
 function MenuList({ menu }) {
   return(
     <li className="navigationMenuListWrap">
-      <span className="navigationMenuList ml-20 font-semibold hover:text-blue-500 hover:underline">{menu}</span>
+      <span className="navigationMenuList">{menu}</span>
     </li>
   )
 }

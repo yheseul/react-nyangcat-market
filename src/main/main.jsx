@@ -11,7 +11,7 @@ export default function Main() {
       <Header />
       <Navigation />
       <div className="content">
-        <div className="content">
+        <div className="main_content">
         <Article className="article"/>
         <Section />
         </div>

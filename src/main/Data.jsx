@@ -9,6 +9,8 @@ import recommendedProductImage2_1 from "./recommendedProductImage2_1.png";
 import recommendedProductImage2_2 from "./recommendedProductImage2_2.png";
 import recommendedProductImage2_3 from "./recommendedProductImage2_3.png";
 import recommendedProductImage2_4 from "./recommendedProductImage2_4.png";
+import specialProductImage1_1 from './specialProductImage1_1.png';
+import specialProductImage1_2 from './specialProductImage1_2.png';
 import { PiCatThin, PiFishSimpleThin, PiCakeThin, PiSprayBottleThin, PiToiletThin, PiPillThin, PiBathtubThin, PiGameControllerThin, PiBowlSteamThin, PiCastleTurretThin, PiHouseLineThin, PiBagThin } from "react-icons/pi";
 
 const MEMBERSONLY = {
@@ -259,35 +261,62 @@ const RECOMMENDED_PRODUCT_TITLE2 = {
 const RECOMMENDED_PRODUCT_CONTENTS2 =[{
   name: "recommendedProductImage2_1",
   url: recommendedProductImage2_1,
-  alt: "가또블랑코 벤토나이트 고양이모래 더스트제로 (6kg/2개입)",
-  productName: "[가또블랑코] 벤토나이트 고양이모래 더스트제로 6kg 2개",
+  alt: "가또블랑코 벤토나이트 고양이모래 더스트제로(6kg/2개입)",
+  productName: "[가또블랑코] 벤토나이트 고양이모래 더스트제로(6kg/2개입)",
   regularPrice: "46,800원",
   discountRate: "50%",
   discountPrice: "46,800원"
 }, {
   name: "recommendedProductImage2_2",
   url: recommendedProductImage2_2,
-  alt: "페스룸 더스트 프리 벤토나이트 오리지널 (6kg/1개입)",
-  productName: "[페스룸] 더스트 프리 벤토나이트 오리지널 (6kg/1개입)",
+  alt: "페스룸 더스트 프리 벤토나이트 오리지널(6kg/1개입)",
+  productName: "[페스룸] 더스트 프리 벤토나이트 오리지널(6kg/1개입)",
   regularPrice: "29,900원",
   discountRate: "30%",
   discountPrice: "20,900원"
 }, {
   name: "recommendedProductImage2_3",
   url: recommendedProductImage2_3,
-  alt: "앤샌드 벤토나이트 고양이모래 (6kg/2개입)",
-  productName: "[앤샌드] 벤토나이트 고양이모래 (6kg/2개입)",
+  alt: "앤샌드 벤토나이트 고양이모래(6kg/2개입)",
+  productName: "[앤샌드] 벤토나이트 고양이모래(6kg/2개입)",
   regularPrice: "46,800원",
   discountRate: "40%",
   discountPrice: "28,080원"
 }, {
   name: "recommendedProductImage2_4",
   url: recommendedProductImage2_4,
-  alt: "아메리칸솔루션 라이트 벤토나이트 고양이모래 (6kg/3개입)",
-  productName: "[아메리칸솔루션] 라이트 벤토나이트 고양이모래 (6kg/3개입)",
+  alt: "아메리칸솔루션 라이트 벤토나이트 고양이모래(6kg/3개입)",
+  productName: "[아메리칸솔루션] 라이트 벤토나이트 고양이모래(6kg/3개입)",
   regularPrice: "53,800원",
   discountRate: "20%",
   discountPrice: "43,040원"
+}
+]
+
+const SPECIAL_PRICE_DAY = {
+  title: '✨최저가 도전',
+  text1: '놓칠 수 없는 기회!',
+  text2: '망설이면 늦어요!'
+}
+
+const SPECIAL_PRICE_DAY_CONTENTS = [{
+  name: 'specialProductImage1_1',
+  url: specialProductImage1_1,
+  alt: '페스룸 힐링 브러쉬 세트 (슬리커브러쉬+브러쉬)',
+  description: '아프지 않게 털만 쏙쏙!',
+  productName: '[페스룸] 힐링 브러쉬 세트 (슬리커브러쉬+브러쉬)',
+  regularPrice: '54,000원',
+  discountRate: '38%',
+  discountPrice: '33,400원'
+}, {
+  name: 'specialProductImage1_2',
+  url: specialProductImage1_2,
+  alt: '가또블랑코 피타 고양이 스크래쳐 해먹',
+  description: '종이 가루 날림이 없는 스크래쳐!',
+  productName: '[가또블랑코] 피타 고양이 스크래쳐 해먹',
+  regularPrice: '76,000원',
+  discountRate: '40%',
+  discountPrice: '45,600원'
 }
 ]
 
@@ -301,5 +330,8 @@ export {
   RECOMMENDED_PRODUCT_TITLE,
   RECOMMENDED_PRODUCT_CONTENTS,
   RECOMMENDED_PRODUCT_TITLE2,
-  RECOMMENDED_PRODUCT_CONTENTS2
+  RECOMMENDED_PRODUCT_CONTENTS2,
+  SPECIAL_PRICE_DAY,
+  SPECIAL_PRICE_DAY_CONTENTS
 };
+
