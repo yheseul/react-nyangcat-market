@@ -34,7 +34,12 @@
 - 지속적인 리팩토링을 통해 코드 품질 향상 및 기능 개선 예정
 
 ## 블로그
-- 프로젝트 진행 과정 및 학습 내용을 정리한 블로그: [블로그 링크](https://blog.naver.com/naive_omlet)
+프로젝트 진행 과정 및 학습 내용을 정리한 블로그 글:
+1. [React-Slick 라이브러리 사용법](https://blog.naver.com/naive_omlet/223435852827)
+2. [React Life Cycle](https://blog.naver.com/naive_omlet/223442701498)
+3. [useEffect](https://blog.naver.com/naive_omlet/223444325855)
+4. [useRef](https://blog.naver.com/naive_omlet/223448905161)
+5. [카운트다운 타이머 구현 (setInterval의 문제점과 useInterval)](https://blog.naver.com/naive_omlet/223449960722)
 
 ## 스크린샷
 
