@@ -223,33 +223,33 @@ const RECOMMENDED_PRODUCT_CONTENTS = [{
   url: recommendedProductImage1_1,
   alt: "소프트릿 고양이 초미니 동결건조 트릿",
   productName: "[소프트릿] 고양이 초미니 동결건조 트릿",
-  regularPrice: "16,000원",
+  regularPrice: "16,000",
   discountRate: "7%",
-  discountPrice: "14,900원"
+  discountPrice: "14,900"
 }, {
   name: "recommendedProductImage1_2",
   url: recommendedProductImage1_2,
   alt: "찹앤찹 찹찹트릿 열빙어 30g",
   productName: "[찹앤찹] 찹찹트릿 열빙어 30g",
-  regularPrice: "5,500원",
+  regularPrice: "5,500",
   discountRate: "10%",
-  discountPrice: "4,400원"
+  discountPrice: "4,400"
 }, {
   name: "recommendedProductImage1_3",
   url: recommendedProductImage1_3,
   alt: "냥쌤 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
   productName: "[냥쌤] 캣 레시피 육즙가득 촉촉한 통살 닭 안심(10개입)",
-  regularPrice: "17,000원",
+  regularPrice: "17,000",
   discountRate: "36%",
-  discountPrice: "10,900원"
+  discountPrice: "10,900"
 }, {
   name: "recommendedProductImage1_4",
   url: recommendedProductImage1_4,
   alt: "냥쌤 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
   productName: "[냥쌤] 교감트릿 49g 3종 set (이뮨/헤어볼케어/릴렉스)",
-  regularPrice: "23,700원",
+  regularPrice: "23,700",
   discountRate: "51%",
-  discountPrice: "11,700원"
+  discountPrice: "11,700"
 }
 ]
 
@@ -263,33 +263,33 @@ const RECOMMENDED_PRODUCT_CONTENTS2 =[{
   url: recommendedProductImage2_1,
   alt: "가또블랑코 벤토나이트 고양이모래 더스트제로(6kg/2개입)",
   productName: "[가또블랑코] 벤토나이트 고양이모래 더스트제로(6kg/2개입)",
-  regularPrice: "46,800원",
+  regularPrice: "46,800",
   discountRate: "50%",
-  discountPrice: "46,800원"
+  discountPrice: "46,800"
 }, {
   name: "recommendedProductImage2_2",
   url: recommendedProductImage2_2,
   alt: "페스룸 더스트 프리 벤토나이트 오리지널(6kg/1개입)",
   productName: "[페스룸] 더스트 프리 벤토나이트 오리지널(6kg/1개입)",
-  regularPrice: "29,900원",
+  regularPrice: "29,900",
   discountRate: "30%",
-  discountPrice: "20,900원"
+  discountPrice: "20,900"
 }, {
   name: "recommendedProductImage2_3",
   url: recommendedProductImage2_3,
   alt: "앤샌드 벤토나이트 고양이모래(6kg/2개입)",
   productName: "[앤샌드] 벤토나이트 고양이모래(6kg/2개입)",
-  regularPrice: "46,800원",
+  regularPrice: "46,800",
   discountRate: "40%",
-  discountPrice: "28,080원"
+  discountPrice: "28,080"
 }, {
   name: "recommendedProductImage2_4",
   url: recommendedProductImage2_4,
   alt: "아메리칸솔루션 라이트 벤토나이트 고양이모래(6kg/3개입)",
   productName: "[아메리칸솔루션] 라이트 벤토나이트 고양이모래(6kg/3개입)",
-  regularPrice: "53,800원",
+  regularPrice: "53,800",
   discountRate: "20%",
-  discountPrice: "43,040원"
+  discountPrice: "43,040"
 }
 ]
 
@@ -305,18 +305,18 @@ const SPECIAL_PRICE_DAY_CONTENTS = [{
   alt: '페스룸 힐링 브러쉬 세트 (슬리커브러쉬+브러쉬)',
   description: '아프지 않게 털만 쏙쏙!',
   productName: '[페스룸] 힐링 브러쉬 세트 (슬리커브러쉬+브러쉬)',
-  regularPrice: '54,000원',
+  regularPrice: '54,000',
   discountRate: '38%',
-  discountPrice: '33,400원'
+  discountPrice: '33,400'
 }, {
   name: 'specialProductImage1_2',
   url: specialProductImage1_2,
   alt: '가또블랑코 피타 고양이 스크래쳐 해먹',
   description: '종이 가루 날림이 없는 스크래쳐!',
   productName: '[가또블랑코] 피타 고양이 스크래쳐 해먹',
-  regularPrice: '76,000원',
+  regularPrice: '76,000',
   discountRate: '40%',
-  discountPrice: '45,600원'
+  discountPrice: '45,600'
 }
 ]
 
